@@ -1,23 +1,32 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../services/menu.service';
 import { Menu } from '../models/menu';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
 
-  constructor(private menuService: MenuService) {}
 
-    menuItems?: Array<Menu>;
+  constructor(private menuService: MenuService) { }
+  
+  menuStatus: string = 'closed';
+  
+  menuItems?: Array<Menu>;
 
-    ngOnInit() {
-      const menu = this.menuService.getItems();
+  ngOnInit() {
+    const menu = this.menuService.getItems();
 
-      this.menuItems = menu;
-    }
+    this.menuItems = menu;
+  }
+
+  menuClick() {
+
+    this.menuStatus = (this.menuStatus === 'open' ? 'closed' : 'open');
+  }
 
 }
