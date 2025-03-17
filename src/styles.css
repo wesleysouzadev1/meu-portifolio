@@ -26,3 +26,48 @@
 
     --color-black-1: #181818;
 }
+
+@media (min-width: 768px) {
+    :root {
+        --font-size-1: 2.8rem;  /* 56px */
+        --font-size-2: 2rem;  /* 40px */
+        --font-size-3: 1.5rem;  /* 30px */
+    }
+}  
+
+h1 {
+    font-size: var(--font-size-3)
+}
+
+h2 {
+    font-size: var(--font-size-2)
+}
+
+h3 {
+    font-size: var(--font-size-3)
+}
+
+a {
+    text-decoration: none;
+}
+
+p, a {
+    font-size: var(--font-size-4);
+    font-weight: 200;
+    color: var(--color-black-1)
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+.container .box {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 60px 40px;
+    }
+}

@@ -13,17 +13,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px 5px;
+    padding: 40px 5px;
 }
 
 .banner .box .paragraph {
     margin: 15px 0;
     font-size: var(--font-size-5);
     font-weight: 200;
+    color: #fff;
 }
 
 .banner .box .title1 {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-2);
 }
 
 .banner .box .title2 {
@@ -53,7 +54,6 @@
     font-weight: 300;
     background: var(--color-blue-0);
     color: #fff;
-    text-decoration: none;
 }
 
 .banner .box .buttons a:hover {
@@ -70,7 +70,6 @@
     display: flex;
     flex-direction: column;
     margin: 30px 15px;
-    padding: 70px 50px;
 }
 
 .about .box .img {
@@ -86,7 +85,7 @@
 
 .about .box .text {
     flex: 3;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .about .box .text h2 {
@@ -115,10 +114,6 @@
 
 .skills {
     background: var(--color-black-1);
-}
-
-.skills .box {
-    padding: 70px 70px;
 }
 
 .skills .box h2,
@@ -167,10 +162,6 @@
 }
 
 /* BOX PROJECTS */
-
-.projects .box {
-    padding: 70px 70px;
-}
 
 .projects .box h2 {
     font-size: var(--font-size-1);
@@ -231,7 +222,6 @@
     font-size: var(--font-size-5);
     font-weight: 400;
     align-items: center;
-    text-decoration: none;
 }
 
 .projects .box .project .text .buttons a.live {
@@ -244,11 +234,68 @@
     margin-right: 8px;
 }
 
+/* BOX CONTACT */
 
+.contact {
+    background: var(--color-black-1);
+}
+
+.contact .box {
+    max-width: 880px;
+}
+
+.contact .box h2,
+.contact .box h3 {
+    color: #fff;
+}
+
+.contact .box .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.contact .box .contacts a {
+    background: var(--color-pink-1);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+    border-radius: 35px;
+    color: #fff;
+    min-width: 200px;
+    font-weight: 700px;
+    margin: 15px 0;
+}
+
+.contact .box .contacts a:hover {
+    background: #f42771bf;
+}
+
+.contact .box .contacts a i {
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.contact .box .contacts a svg {
+    width: 30px;
+    margin-right: 5px;
+}
 
 @media (min-width: 768px) {
+    .about {
+        padding: 30px 30px;
+    }
+    
     .about .box {
         flex-direction: row;
+    }
+
+    .about .box .text {
+        padding: 0 30px;
     }
 
     
@@ -274,6 +321,19 @@
     .projects .box .project.reverse {
         flex-direction: row;
         flex: 1;
+    }
+
+    .contact .box .contacts {
+        flex-direction: row;
+    }
+
+    .contact .box h2 {
+        font-size: var(--font-size-2);
+    }
+
+    .contact .box h3 {
+        font-size: var(--font-size-3);
+        font-weight: 500;
     }
 }
 
